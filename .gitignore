@@ -5,5 +5,5 @@
 # build/ # ignore all files in the build/ directory
 # doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt
 
-Plugins/HoudiniEngineUnity/Scripts/HEU_HoudiniVersion.cs
 /.vs
+Plugins/HoudiniEngineUnity/Scripts/HEU_HoudiniVersion.cs
