@@ -31,6 +31,7 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.Search;
 #endif
 
 namespace HoudiniEngineUnity
@@ -1341,12 +1342,20 @@ namespace HoudiniEngineUnity
                 {
                     bool nameType = splits[1].Equals("name");
                     string assetName = splits[2];
+#if UNITY_6000_4_OR_NEWER
+                    EntityId assetID = EntityId.None;
+#else
                     int assetID = 0;
+#endif
 
                     if (!nameType)
                     {
                         // This is using ID type, so get the ID
+#if UNITY_6000_4_OR_NEWER
+                        if (!SearchUtils.TryParse(splits[2], out assetID))
+#else
                         if (!int.TryParse(splits[2], out assetID))
+#endif
                         {
                             return null;
                         }

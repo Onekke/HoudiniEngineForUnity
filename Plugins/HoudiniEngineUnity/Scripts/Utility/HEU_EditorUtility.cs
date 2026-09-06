@@ -1393,21 +1393,17 @@ namespace HoudiniEngineUnity
 #endif
             return GetObjectParentFolderHelper(currentObjectPath);
         }
-#endif
-
+#else
         private static string GetObjectParentFolderHelper(int instanceID)
         {
 #if UNITY_EDITOR
-#if UNITY_6000_3_OR_NEWER
-            string currentObjectPath = AssetDatabase.GetAssetPath((EntityId)instanceID);
-#else
             string currentObjectPath = AssetDatabase.GetAssetPath(instanceID);
-#endif
 #else
             string currentObjectPath = "";
 #endif
             return GetObjectParentFolderHelper(currentObjectPath);
         }
+#endif
         private static string GetObjectParentFolderHelper(string currentObjectPath)
         {
             string targetAssetPath = "";

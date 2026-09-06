@@ -1,0 +1,9 @@
+{
+  "name": "com.onekke.houdini-engine",
+  "version": "9.0.0",
+  "displayName": "Houdini Engine for Unity",
+  "description": "This is a forked version of Houdini Engine for Unity developed by SideFX.",
+  "author": {
+    "name": "Alena Mikushina"
+  }
+}

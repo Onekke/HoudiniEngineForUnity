@@ -7,3 +7,4 @@
 
 /.vs
 Plugins/HoudiniEngineUnity/Scripts/HEU_HoudiniVersion.cs
+*.meta
